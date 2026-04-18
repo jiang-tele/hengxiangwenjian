@@ -1,0 +1,51 @@
+账号登陆
+user@LAPTOP-SVMFJPNH MINGW64 /f/git.demo (main)
+$ git config --global user.name "jiang-tele"
+
+user@LAPTOP-SVMFJPNH MINGW64 /f/git.demo (main)
+$ git config --global user.email "2147113571@qq.com"
+
+远程仓库初始化
+user@LAPTOP-SVMFJPNH MINGW64 /f/git.demo (main)
+$ touch README.md
+git init
+git checkout -b main
+git add .
+git commit -m "first commit"
+
+仓库绑定再次进行报错
+user@LAPTOP-SVMFJPNH MINGW64 /f/git.demo (main)
+$ git remote add origin https://github.com/jiang-tele/hengxiangwenjian
+error: remote origin already exists.
+
+
+
+移除之前仓库绑定
+$ git remote remove origin
+
+绑定远程仓库
+user@LAPTOP-SVMFJPNH MINGW64 /f/git.demo (main)
+$ git remote add origin https://github.com/jiang-tele/hengxiangwenjian
+
+强制远程本地一直
+$ git push -u origin main --force
+
+推送本地修改
+
+git add .
+git commit -m "<提交说明>"
+git push
+
+创建并转换到一个新的分支名为“初始化修改”
+user@LAPTOP-SVMFJPNH MINGW64 /f/git.demo (main)
+$ git checkout -b initialize-modification
+Switched to a new branch 'initialize-modification'
+
+创建一个分支
+user@LAPTOP-SVMFJPNH MINGW64 /f/git.demo (initialize-modification)
+$ git branch 'initialize-modification'
+
+转换分支main
+user@LAPTOP-SVMFJPNH MINGW64 /f/git.demo (initialize-modification)
+$ git checkout main
+

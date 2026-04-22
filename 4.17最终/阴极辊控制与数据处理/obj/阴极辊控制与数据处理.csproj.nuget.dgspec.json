@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "F:\\研究生项目\\总理\\最新 - 副本\\阴极辊控制与数据处理\\阴极辊控制与数据处理.csproj": {}
+    "F:\\git.demo\\4.17最终\\阴极辊控制与数据处理\\阴极辊控制与数据处理.csproj": {}
   },
   "projects": {
-    "F:\\研究生项目\\总理\\最新 - 副本\\阴极辊控制与数据处理\\阴极辊控制与数据处理.csproj": {
+    "F:\\git.demo\\4.17最终\\阴极辊控制与数据处理\\阴极辊控制与数据处理.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "F:\\研究生项目\\总理\\最新 - 副本\\阴极辊控制与数据处理\\阴极辊控制与数据处理.csproj",
+        "projectUniqueName": "F:\\git.demo\\4.17最终\\阴极辊控制与数据处理\\阴极辊控制与数据处理.csproj",
         "projectName": "阴极辊控制与数据处理",
-        "projectPath": "F:\\研究生项目\\总理\\最新 - 副本\\阴极辊控制与数据处理\\阴极辊控制与数据处理.csproj",
+        "projectPath": "F:\\git.demo\\4.17最终\\阴极辊控制与数据处理\\阴极辊控制与数据处理.csproj",
         "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
-        "outputPath": "F:\\研究生项目\\总理\\最新 - 副本\\阴极辊控制与数据处理\\obj\\",
+        "outputPath": "F:\\git.demo\\4.17最终\\阴极辊控制与数据处理\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

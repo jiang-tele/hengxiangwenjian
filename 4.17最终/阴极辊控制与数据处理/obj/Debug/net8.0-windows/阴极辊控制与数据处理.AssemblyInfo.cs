@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("阴极辊控制与数据处理")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+9417fbfd8b1e5275a82524feee34f29d8cee9ec8")]
 [assembly: System.Reflection.AssemblyProductAttribute("阴极辊控制与数据处理")]
 [assembly: System.Reflection.AssemblyTitleAttribute("阴极辊控制与数据处理")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

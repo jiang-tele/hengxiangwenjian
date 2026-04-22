@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "zQC01PqNJEM=",
+  "dgSpecHash": "ohx/iMCVfSk=",
   "success": true,
-  "projectFilePath": "F:\\研究生项目\\总理\\最新 - 副本\\阴极辊控制与数据处理\\阴极辊控制与数据处理.csproj",
+  "projectFilePath": "F:\\git.demo\\4.17最终\\阴极辊控制与数据处理\\阴极辊控制与数据处理.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\user\\.nuget\\packages\\mathnet.numerics\\5.0.0\\mathnet.numerics.5.0.0.nupkg.sha512",
     "C:\\Users\\user\\.nuget\\packages\\microsoft.netcore.platforms\\3.1.0\\microsoft.netcore.platforms.3.1.0.nupkg.sha512",

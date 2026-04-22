@@ -318,7 +318,7 @@ namespace 阴极辊控制与数据处理
             {
                 try
                 {
-                    serialPort = new SerialPort("COM19", 9600, Parity.None, 8, StopBits.One);
+                    serialPort = new SerialPort("COM1", 9600, Parity.None, 8, StopBits.One);
                     serialPort.Open();
                     modbus = new ModbusMaster(serialPort);
                     isConnected = true;

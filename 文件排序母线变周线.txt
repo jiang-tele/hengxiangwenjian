@@ -1,0 +1,112 @@
+生成一套可以直接在matlab中运行的代码，可以读取F:\研究生项目\1\yinpin90x17这个地址内的文件，并将里面子文件夹里面的每一个wav进行重命名为其所在子文件夹的名字+其原来的名字，
+
+%% 批量重命名子文件夹中的 WAV 文件
+clear; clc;
+
+% 1. 设置根目录路径
+rootPath = 'F:\研究生项目\1\yinpin90x17';
+
+% 2. 递归获取所有子文件夹下的 wav 文件信息
+% '**/*.wav' 表示搜索当前文件夹及其所有子文件夹下的 wav 文件
+fileList = dir(fullfile(rootPath, '**', '*.wav'));
+
+fprintf('找到 %d 个音频文件，准备开始重命名...\n', length(fileList));
+successCount = 0;
+
+% 3. 遍历文件列表进行重命名
+for i = 1:length(fileList)
+    % 获取当前文件的详细信息
+    oldName = fileList(i).name;          % 原文件名 (例如: audio01.wav)
+    currentDir = fileList(i).folder;     % 当前文件所在的完整路径
+    
+    % 提取当前文件所属的子文件夹名称
+    % fileparts 会返回路径、文件名和后缀，我们取路径的最后一级
+    [~, parentFolderName] = fileparts(currentDir);
+    
+    % 4. 构造新文件名
+    % 格式：子文件夹名_原文件名.wav
+    newName = [parentFolderName, '_', oldName];
+    
+    % 构造完整的旧路径和新路径
+    oldFullPath = fullfile(currentDir, oldName);
+    newFullPath = fullfile(currentDir, newName);
+    
+    % 5. 执行重命名操作 (本质是移动文件)
+    try
+        % 检查是否已经重命名过，防止重复执行导致名字越来越长
+        if ~contains(oldName, parentFolderName)
+            movefile(oldFullPath, newFullPath);
+            successCount = successCount + 1;
+            fprintf('已重命名: %s -> %s\n', oldName, newName);
+        else
+            fprintf('跳过 (已处理过): %s\n', oldName);
+        end
+    catch ME
+        warning('无法处理文件 %s: %s', oldName, ME.message);
+    end
+end
+
+fprintf('--- 任务完成！共成功处理 %d 个文件 ---\n', successCount);
+
+
+
+
+
+F:\研究生项目\1\yinpin90x17在这个文件夹里面有90个子文件夹，每一个子文件里面的wav，都已经重命名为母线x_i的形式，i从1-17，现在需要现在这个F:\研究生项目\1\yinpin90x17地址里面生成一个新的文件夹，里面生成17个子文件夹，每一个子文件夹里面存放着i一样的wav文件母线x_1，比如i为1时，就是从90个子文件夹里面，找到每一个子文件里面i为1的文件，都移动到新的文件夹里面的第一个子文件夹里面，i为2就从90个子文件里面找里面格式母线x_2的文件，放到新的文件夹里面的第2个子文件夹里面，移动过程中每个wav文件的命名不要更改，生成可以直接在matlab中运行的代码
+
+
+%% 研究生项目：按 i 索引重组音频文件
+clear; clc;
+
+% 1. 设置路径
+rootPath = 'F:\研究生项目\1\yinpin90x17';
+outputPath = fullfile(rootPath, 'Sorted_Output'); % 新生成的总文件夹名称
+
+% 2. 如果输出文件夹不存在，则创建它
+if ~exist(outputPath, 'dir')
+    mkdir(outputPath);
+end
+
+% 3. 获取 rootPath 下所有的子文件夹列表 (那90个子文件夹)
+% dir 会包含 '.' 和 '..'，需要排除
+allDirs = dir(rootPath);
+subFolders = allDirs([allDirs.isdir] & ~ismember({allDirs.name}, {'.', '..', 'Sorted_Output'}));
+
+fprintf('识别到 %d 个原始子文件夹，准备重组...\n', length(subFolders));
+
+% 4. 循环 17 个目标类别 (i = 1 到 17)
+for i = 1:17
+    % 创建目标子文件夹，例如 "Group_1", "Group_2" 等
+    targetSubFolder = fullfile(outputPath, sprintf('Group_%d', i));
+    if ~exist(targetSubFolder, 'dir')
+        mkdir(targetSubFolder);
+    end
+    
+    fprintf('正在处理第 %d 类文件 (i=%d)...\n', i, i);
+    
+    % 5. 遍历这 90 个原始子文件夹查找匹配的文件
+    for j = 1:length(subFolders)
+        currentSubDir = fullfile(rootPath, subFolders(j).name);
+        
+        % 构造要寻找的文件名模式，例如 "*_1.wav"
+        % 根据您的描述，文件名结尾是 _i.wav
+        targetFileNamePattern = sprintf('*_%d.wav', i);
+        
+        % 在当前子文件夹中搜索该文件
+        matchFile = dir(fullfile(currentSubDir, targetFileNamePattern));
+        
+        if ~isempty(matchFile)
+            % 如果找到了匹配的文件（可能有多个，通常应该只有一个）
+            for k = 1:length(matchFile)
+                sourceFile = fullfile(currentSubDir, matchFile(k).name);
+                destFile = fullfile(targetSubFolder, matchFile(k).name);
+                
+                % 执行复制或移动
+                % 如果想保留原始数据用 copyfile；如果想彻底搬走用 movefile
+                copyfile(sourceFile, destFile); 
+            end
+        end
+    end
+end
+
+fprintf('--- 任务完成！文件已存放到: %s ---\n', outputPath);

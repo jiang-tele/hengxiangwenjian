@@ -209,7 +209,6 @@ namespace 阴极辊控制与数据处理
             uiSymbolButton4.SymbolSize = 50;
             uiSymbolButton4.TabIndex = 8;
             uiSymbolButton4.TipsFont = new Font("宋体", 9F, FontStyle.Regular, GraphicsUnit.Point, 134);
-    
             uiSymbolButton4.MouseDown += uiSymbolButton4_MouseDown;
             uiSymbolButton4.MouseUp += uiSymbolButton4_MouseUp;
             // 
@@ -227,7 +226,6 @@ namespace 阴极辊控制与数据处理
             uiSymbolButton6.SymbolSize = 50;
             uiSymbolButton6.TabIndex = 6;
             uiSymbolButton6.TipsFont = new Font("宋体", 9F, FontStyle.Regular, GraphicsUnit.Point, 134);
-
             uiSymbolButton6.MouseDown += uiSymbolButton6_MouseDown;
             uiSymbolButton6.MouseUp += uiSymbolButton6_MouseUp;
             // 
@@ -270,7 +268,6 @@ namespace 阴极辊控制与数据处理
             uiTextBox6.Text = "300";
             uiTextBox6.TextAlignment = ContentAlignment.MiddleLeft;
             uiTextBox6.Watermark = "";
-
             // 
             // uiLabel9
             // 
@@ -281,7 +278,6 @@ namespace 阴极辊控制与数据处理
             uiLabel9.Size = new Size(104, 23);
             uiLabel9.TabIndex = 18;
             uiLabel9.Text = "辊幅宽：";
-
             // 
             // cbMicrophones
             // 
@@ -406,10 +402,10 @@ namespace 阴极辊控制与数据处理
             // uiButton1
             // 
             uiButton1.Font = new Font("宋体", 12F, FontStyle.Regular, GraphicsUnit.Point, 134);
-            uiButton1.Location = new Point(25, 87);
+            uiButton1.Location = new Point(25, 92);
             uiButton1.MinimumSize = new Size(1, 1);
             uiButton1.Name = "uiButton1";
-            uiButton1.Size = new Size(100, 51);
+            uiButton1.Size = new Size(113, 46);
             uiButton1.TabIndex = 3;
             uiButton1.Text = "plc连接";
             uiButton1.TipsFont = new Font("宋体", 9F, FontStyle.Regular, GraphicsUnit.Point, 134);
@@ -418,10 +414,10 @@ namespace 阴极辊控制与数据处理
             // uiButton2
             // 
             uiButton2.Font = new Font("宋体", 12F, FontStyle.Regular, GraphicsUnit.Point, 134);
-            uiButton2.Location = new Point(312, 96);
+            uiButton2.Location = new Point(312, 92);
             uiButton2.MinimumSize = new Size(1, 1);
             uiButton2.Name = "uiButton2";
-            uiButton2.Size = new Size(100, 51);
+            uiButton2.Size = new Size(116, 46);
             uiButton2.TabIndex = 4;
             uiButton2.Text = "错误复位";
             uiButton2.TipsFont = new Font("宋体", 9F, FontStyle.Regular, GraphicsUnit.Point, 134);
@@ -431,10 +427,10 @@ namespace 阴极辊控制与数据处理
             // uiButton3
             // 
             uiButton3.Font = new Font("宋体", 12F, FontStyle.Regular, GraphicsUnit.Point, 134);
-            uiButton3.Location = new Point(179, 96);
+            uiButton3.Location = new Point(172, 92);
             uiButton3.MinimumSize = new Size(1, 1);
             uiButton3.Name = "uiButton3";
-            uiButton3.Size = new Size(100, 51);
+            uiButton3.Size = new Size(116, 46);
             uiButton3.TabIndex = 5;
             uiButton3.Text = "断开连接";
             uiButton3.TipsFont = new Font("宋体", 9F, FontStyle.Regular, GraphicsUnit.Point, 134);
@@ -473,10 +469,10 @@ namespace 阴极辊控制与数据处理
             // uiButton9
             // 
             uiButton9.Font = new Font("宋体", 12F, FontStyle.Regular, GraphicsUnit.Point, 134);
-            uiButton9.Location = new Point(312, 153);
+            uiButton9.Location = new Point(312, 144);
             uiButton9.MinimumSize = new Size(1, 1);
             uiButton9.Name = "uiButton9";
-            uiButton9.Size = new Size(100, 35);
+            uiButton9.Size = new Size(116, 44);
             uiButton9.TabIndex = 9;
             uiButton9.Text = "单点敲击";
             uiButton9.TipsFont = new Font("宋体", 9F, FontStyle.Regular, GraphicsUnit.Point, 134);
@@ -486,9 +482,9 @@ namespace 阴极辊控制与数据处理
             // 
             button1.BackColor = Color.CornflowerBlue;
             button1.ForeColor = Color.White;
-            button1.Location = new Point(172, 153);
+            button1.Location = new Point(312, 38);
             button1.Name = "button1";
-            button1.Size = new Size(107, 35);
+            button1.Size = new Size(116, 44);
             button1.TabIndex = 19;
             button1.Text = "停止采集";
             button1.UseVisualStyleBackColor = false;
@@ -500,7 +496,7 @@ namespace 阴极辊控制与数据处理
             uiButton4.Location = new Point(25, 144);
             uiButton4.MinimumSize = new Size(1, 1);
             uiButton4.Name = "uiButton4";
-            uiButton4.Size = new Size(125, 44);
+            uiButton4.Size = new Size(113, 44);
             uiButton4.TabIndex = 20;
             uiButton4.Text = "手自动切换";
             uiButton4.TipsFont = new Font("宋体", 9F, FontStyle.Regular, GraphicsUnit.Point, 134);
@@ -509,10 +505,10 @@ namespace 阴极辊控制与数据处理
             // uiButton5
             // 
             uiButton5.Font = new Font("宋体", 12F, FontStyle.Regular, GraphicsUnit.Point, 134);
-            uiButton5.Location = new Point(303, 38);
+            uiButton5.Location = new Point(172, 144);
             uiButton5.MinimumSize = new Size(1, 1);
             uiButton5.Name = "uiButton5";
-            uiButton5.Size = new Size(125, 44);
+            uiButton5.Size = new Size(116, 44);
             uiButton5.TabIndex = 21;
             uiButton5.Text = "自动启停";
             uiButton5.TipsFont = new Font("宋体", 9F, FontStyle.Regular, GraphicsUnit.Point, 134);
